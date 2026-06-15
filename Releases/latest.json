@@ -4,7 +4,7 @@
   "pub_date": "2025-06-12T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://raw.githubusercontent.com/edev2/accountpro/refs/heads/main/releases/accountpro_desktop_0.1.2_x64_en-US.msi",
+      "url": "https://raw.githubusercontent.com/edev2/loksewamd/refs/heads/main/releases/loksewamd_pc_0.1.2_x64_en-US.msi",
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTanJkWlZHNUZGSlF4MXo5VHI5UWc2aXNjN2ZVaXc2dDNTeEtuRyt6YXI5Yld1b1lMUnQyMC9aQmlJVTlVNE9uU0oxakZBRXNQWjVWR3FnNlgvUlgvb244ak9ONG9mOVFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjM2Mjg5CWZpbGU6YWNjb3VudHByb19kZXNrdG9wXzAuMS4yX3g2NF9lbi1VUy5tc2kKWjRWbUNTWUc1aUUvbHNyNTdnRGs0K2J1NG0xRlROa0NncHU5R0NYUEdCNDIwU243dDV0bUNZUTBRd24wR3RKRXJqQW8xTUZ1SXFnYkpyamtxY21kRHc9PQo="
     }
   }
