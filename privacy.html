@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Loksewa MD Privacy Policy — How we collect, use, and protect your information." />
+  <title>Loksewa MD · Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --saffron:   #e85d04;
+      --saffron-lt:#fff1ea;
+      --crimson:   #c1121f;
+      --ink:       #12130f;
+      --ink-soft:  #4b4f43;
+      --surface:   #fafaf7;
+      --white:     #ffffff;
+      --rule:      #e6e7e1;
+      --radius:    16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--surface);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--saffron); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ─────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,250,247,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(1rem, 5vw, 3rem);
+      height: 62px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 1.05rem; color: var(--ink);
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--saffron);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-family: 'Tiro Devanagari Nepal', serif;
+      font-size: 1rem;
+    }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; font-size: 0.88rem; font-weight: 500; }
+    .nav-links a { color: var(--ink-soft); }
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+    .nav-links a.active { color: var(--saffron); }
+    .nav-cta {
+      background: var(--saffron); color: #fff !important;
+      padding: 7px 18px; border-radius: 100px;
+      font-weight: 600 !important;
+    }
+
+    /* ── Page layout ─────────────────────────────────────── */
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vw, 4rem) clamp(1rem, 5vw, 2.5rem);
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    /* ── Sidebar TOC ─────────────────────────────────────── */
+    .toc {
+      position: sticky; top: 82px;
+    }
+    .toc-label {
+      text-transform: uppercase; letter-spacing: 0.1em;
+      font-size: 0.72rem; font-weight: 700; color: var(--ink-soft);
+      margin-bottom: 0.75rem;
+    }
+    .toc ul { list-style: none; }
+    .toc li { margin-bottom: 0.1rem; }
+    .toc a {
+      display: block; padding: 0.32rem 0.7rem;
+      border-radius: 8px; color: var(--ink-soft);
+      font-size: 0.83rem; font-weight: 500;
+      transition: all 0.15s;
+    }
+    .toc a:hover { background: var(--saffron-lt); color: var(--saffron); text-decoration: none; }
+
+    /* ── Hero ────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--saffron) 0%, var(--crimson) 100%);
+      border-radius: var(--radius);
+      padding: clamp(2rem, 5vw, 2.8rem);
+      color: #fff;
+      margin-bottom: 2.5rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; right: -50px; top: -50px;
+      width: 220px; height: 220px; border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.18); border-radius: 100px;
+      padding: 4px 14px; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Tiro Devanagari Nepal', serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 400; line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+    .hero p { opacity: 0.88; font-size: 0.95rem; max-width: 480px; }
+    .hero-meta {
+      margin-top: 1.4rem;
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .hero-meta span {
+      font-size: 0.8rem; opacity: 0.8;
+      display: flex; align-items: center; gap: 5px;
+    }
+
+    /* ── Content ─────────────────────────────────────────── */
+    .policy-section {
+      margin-bottom: 2.5rem;
+    }
+    .policy-section:last-child { margin-bottom: 0; }
+
+    .section-anchor { display: block; position: relative; top: -90px; visibility: hidden; }
+
+    h2 {
+      font-family: 'Tiro Devanagari Nepal', serif;
+      font-size: 1.4rem; font-weight: 400;
+      margin-bottom: 0.9rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .h2-icon {
+      width: 34px; height: 34px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+
+    p {
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      margin-bottom: 0.85rem;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 0.5rem 0 0.85rem 0;
+      display: flex; flex-direction: column; gap: 0.4rem;
+    }
+    ul li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 0.93rem; color: var(--ink-soft);
+    }
+    ul li::before {
+      content: '→';
+      color: var(--saffron); font-weight: 700;
+      flex-shrink: 0; margin-top: 1px;
+    }
+
+    hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+    /* ── Info boxes ──────────────────────────────────────── */
+    .infobox {
+      border-radius: var(--radius);
+      padding: 1.1rem 1.3rem;
+      display: flex; gap: 0.85rem; align-items: flex-start;
+      margin: 1rem 0;
+    }
+    .infobox.orange { background: var(--saffron-lt); border-left: 3px solid var(--saffron); }
+    .infobox.blue   { background: #eff6ff; border-left: 3px solid #3b82f6; }
+    .infobox.green  { background: #f0fdf4; border-left: 3px solid #22c55e; }
+    .infobox p { font-size: 0.88rem; color: var(--ink); margin: 0; }
+    .infobox strong { display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .box-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── Contact card ────────────────────────────────────── */
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    .contact-row {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.9rem; color: var(--ink-soft);
+    }
+    .contact-row span:first-child { font-size: 1.1rem; }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.8rem clamp(1rem, 5vw, 3rem);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+      font-size: 0.82rem; color: var(--ink-soft);
+      max-width: 1000px; margin: 0 auto;
+    }
+    footer a { color: var(--saffron); }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 700px) {
+      .page { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .nav-links li:not(:last-child) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <a class="nav-brand" href="index.html">
+    <div class="logo-mark">लो</div>
+    Loksewa MD
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#download">Download</a></li>
+    <li><a href="#" class="active">Privacy Policy</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.edev.loksewa" target="_blank" class="nav-cta">Get the App</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- Sidebar TOC -->
+  <aside class="toc">
+    <p class="toc-label">On this page</p>
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#storage">Storage Permission</a></li>
+      <li><a href="#sources">Data Sources</a></li>
+      <li><a href="#collection">Information We Collect</a></li>
+      <li><a href="#admob">Third-Party Ads</a></li>
+      <li><a href="#use">Use of Information</a></li>
+      <li><a href="#sharing">Information Sharing</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#choices">Your Choices</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Policy Changes</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-badge">📄 Legal</div>
+      <h1>Privacy Policy</h1>
+      <p>How Loksewa MD collects, uses, and protects your information when you use our app.</p>
+      <div class="hero-meta">
+        <span>🗓️ Last updated: March 2026</span>
+        <span>📍 Dev Pandey, Kathmandu, Nepal</span>
+      </div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="policy-section" id="intro">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#fff1ea">📖</span> Introduction</h2>
+      <p>This Privacy Policy ("Policy") applies to your use of <strong>Loksewa MD</strong>, an educational app built solely to help individuals prepare for competitive examinations in Nepal.</p>
+      <div class="infobox orange">
+        <span class="box-icon">⚠️</span>
+        <p><strong>Not a government app</strong>Loksewa MD is not affiliated with any government entity in Nepal, including the Public Service Commission or the Nepal Law Commission. This app does not guarantee success in any competitive examination.</p>
+      </div>
+      <p>Loksewa MD curates study materials from government websites and other public sources. This Policy describes the information we collect through the app and how we use it.</p>
+    </div>
+
+    <hr/>
+
+    <!-- Storage Permission -->
+    <div class="policy-section" id="storage">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#fff1ea">📂</span> Storage Permission</h2>
+      <p>This app requires access to your device's external storage in order to load offline video content. You can grant or revoke this permission at any time through your device's settings.</p>
+    </div>
+
+    <hr/>
+
+    <!-- Data Sources -->
+    <div class="policy-section" id="sources">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#f0fdf4">🏛️</span> Official Data Sources</h2>
+      <p>All government-related content displayed in Loksewa MD is sourced directly from the following official public websites:</p>
+      <ul>
+        <li><strong>Public Service Commission of Nepal (Loksewa Aayog):</strong> <a href="https://psc.gov.np" target="_blank">psc.gov.np</a></li>
+        <li><strong>Nepal Law Commission:</strong> <a href="https://lawcommission.gov.np" target="_blank">lawcommission.gov.np</a></li>
+      </ul>
+      <div class="infobox green">
+        <span class="box-icon">✅</span>
+        <p>We encourage users to cross-verify all official notices and legal documents from the original government sources listed above.</p>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Information We Collect -->
+    <div class="policy-section" id="collection">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#eff6ff">📋</span> Information We Collect</h2>
+      <p>We collect the following information when you use the app:</p>
+      <ul>
+        <li><strong>User Account Information:</strong> When you sign in with your Google account, we collect your basic account details — name, profile photo, and email address. This is used solely for account management within the app and is never shared with any third party.</li>
+        <li><strong>Device Information:</strong> We collect information about your device such as the model, operating system version, and a unique device identifier. This is used for technical purposes including app performance analysis and troubleshooting.</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <!-- AdMob -->
+    <div class="policy-section" id="admob">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#fff1ea">📢</span> Third-Party Advertising (AdMob)</h2>
+      <p>The app uses <strong>Google AdMob</strong> to display advertisements. Google AdMob may collect information about your device and app usage to serve relevant ads. We do not control the data collected or used by Google AdMob.</p>
+      <div class="infobox blue">
+        <span class="box-icon">ℹ️</span>
+        <p>You can learn more about Google's advertising practices and opt out of personalized advertising at <a href="https://www.google.com/ads/preferences/html/blocked-cookies.html" target="_blank">google.com/ads/preferences</a>.</p>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Use of Information -->
+    <div class="policy-section" id="use">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#f0fdf4">⚙️</span> Use of Information</h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li>To provide and maintain the app</li>
+        <li>To manage your account</li>
+        <li>To analyze how you use the app and improve performance</li>
+        <li>To personalize your experience within the app</li>
+        <li>To communicate with you about updates, security alerts, and support</li>
+        <li>To comply with legal and regulatory obligations</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <!-- Information Sharing -->
+    <div class="policy-section" id="sharing">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#fff1ea">🔗</span> Information Sharing</h2>
+      <p>We do not sell or share your personal information with any third party, except for Google AdMob as described above. We may share anonymized and aggregated information about user activity with third-party analytics providers to help us improve the app.</p>
+    </div>
+
+    <hr/>
+
+    <!-- Data Security -->
+    <div class="policy-section" id="security">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#eff6ff">🔒</span> Data Security</h2>
+      <p>We take reasonable measures to protect your information from unauthorized access, disclosure, alteration, or destruction. However, no internet transmission or electronic storage method is completely secure, so we cannot guarantee absolute security of your information.</p>
+    </div>
+
+    <hr/>
+
+    <!-- Your Choices -->
+    <div class="policy-section" id="choices">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#f0fdf4">✅</span> Your Choices</h2>
+      <p>You can access or update your account information at any time by signing in to your Google account. If you wish to delete your information from our systems, please contact us using the details below and we will take steps to remove it promptly.</p>
+    </div>
+
+    <hr/>
+
+    <!-- Children's Privacy -->
+    <div class="policy-section" id="children">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#fff1ea">🧒</span> Children's Privacy</h2>
+      <p>Loksewa MD is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately — we will take steps to delete that information from our servers.</p>
+    </div>
+
+    <hr/>
+
+    <!-- Policy Changes -->
+    <div class="policy-section" id="changes">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#eff6ff">🔄</span> Changes to This Policy</h2>
+      <p>We may update this Policy from time to time. When we do, we will notify you by posting the updated Policy on this page. We encourage you to review this page periodically to stay informed about how we are protecting your information.</p>
+      <p>You can also control the collection of information by Google AdMob by visiting <a href="https://www.google.com/ads/preferences/html/blocked-cookies.html" target="_blank">google.com/ads/preferences</a>.</p>
+    </div>
+
+    <hr/>
+
+    <!-- Contact -->
+    <div class="policy-section" id="contact">
+      <span class="section-anchor"></span>
+      <h2><span class="h2-icon" style="background:#fff1ea">💬</span> Contact Us</h2>
+      <p>If you have any questions or concerns about this Privacy Policy, please reach out to us:</p>
+      <div class="contact-card">
+        <div class="contact-row"><span>👤</span><span><strong>Dev Pandey</strong></span></div>
+        <div class="contact-row"><span>📧</span><span><a href="mailto:gkpointnepal@gmail.com">gkpointnepal@gmail.com</a></span></div>
+        <div class="contact-row"><span>📍</span><span>Kathmandu, Nepal</span></div>
+        <div class="contact-row"><span>🌐</span><span><a href="http://edevpandey.com.np" target="_blank">edevpandey.com.np</a></span></div>
+      </div>
+      <div class="infobox orange" style="margin-top:1.2rem">
+        <span class="box-icon">📌</span>
+        <p>By using the Loksewa MD app, you agree to be bound by this Privacy Policy.</p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- Footer -->
+<footer>
+  <span>© 2026 Loksewa MD · by <a href="http://edevpandey.com.np" target="_blank">Dev Pandey</a></span>
+  <span>
+    <a href="index.html">Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html#download">Download</a>
+    &nbsp;·&nbsp;
+    <a href="https://play.google.com/store/apps/details?id=com.edev.loksewa" target="_blank">Google Play</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:gkpointnepal@gmail.com">Contact</a>
+  </span>
+</footer>
+
+</body>
+</html>
