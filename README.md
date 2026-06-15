@@ -33,20 +33,33 @@ The app brings together all the resources an aspirant needs — from video lectu
 
 ## 📲 Download
 
-**Available on Google Play:**
+### 🤖 Android — Google Play
 
 [![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.edev.loksewa)
 
 **Package ID:** `com.edev.loksewa`
 
+### 🪟 Windows — Desktop App
+
+[![Download for Windows](https://img.shields.io/badge/Windows-Download-0078d4?logo=windows&logoColor=white)](https://github.com/edev2/loksewamd/tree/main/Releases)
+
+Download the latest Windows installer from the [Releases folder on GitHub](https://github.com/edev2/loksewamd/tree/main/Releases).
+
+**Installation steps:**
+1. Go to the [Releases](https://github.com/edev2/loksewamd/tree/main/Releases) folder
+2. Download the latest `.exe` installer
+3. Run the installer and follow the on-screen instructions
+4. Launch **Loksewa MD** from your desktop or Start menu
+
 ---
 
 ## 📊 Stats
 
-- **10,000+** downloads
+- **10,000+** downloads (Android)
 - **4.4 / 5** average rating (51 reviews)
 - **Rated for 3+**
 - **Category:** Education
+- **Platforms:** Android, Windows
 - **Last Updated:** March 2026
 
 ---
