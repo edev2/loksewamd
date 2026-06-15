@@ -1,1 +1,573 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Loksewa MD — All-in-one e-learning app for competitive examinations in Nepal. Video lectures, eBooks, syllabi, exam notices & official legal documents." />
+  <title>Loksewa MD · लोकसेवा तयारी</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Tokens ──────────────────────────────────────────── */
+    :root {
+      --saffron:   #e85d04;
+      --saffron-lt:#fff1ea;
+      --crimson:   #c1121f;
+      --forest:    #1a6b3c;
+      --forest-lt: #d6f0e2;
+      --ink:       #12130f;
+      --ink-soft:  #4b4f43;
+      --surface:   #fafaf7;
+      --white:     #ffffff;
+      --rule:      #e6e7e1;
+      --radius:    16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--surface);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--saffron); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ─────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,250,247,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(1rem, 5vw, 3rem);
+      height: 62px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 1.05rem; color: var(--ink);
+    }
+    .logo-mark {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--saffron);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-family: 'Tiro Devanagari Nepal', serif;
+      font-size: 1rem; font-weight: 400;
+    }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; font-size: 0.88rem; font-weight: 500; }
+    .nav-links a { color: var(--ink-soft); }
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+    .nav-cta {
+      background: var(--saffron); color: #fff !important;
+      padding: 7px 18px; border-radius: 100px;
+      font-weight: 600 !important; font-size: 0.85rem !important;
+      transition: opacity 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ── Hero ────────────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2.5rem);
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--saffron-lt); color: var(--saffron);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: 'Tiro Devanagari Nepal', serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      line-height: 1.2;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    .hero h1 em {
+      font-style: italic; color: var(--saffron);
+    }
+    .hero-sub {
+      font-size: 1.05rem; color: var(--ink-soft);
+      margin-bottom: 2rem; max-width: 440px;
+    }
+    .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--saffron); color: #fff;
+      border-radius: 100px; padding: 13px 26px;
+      font-weight: 600; font-size: 0.95rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 20px rgba(232,93,4,0.25);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,93,4,0.3); text-decoration: none; }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white); color: var(--ink);
+      border: 1.5px solid var(--rule);
+      border-radius: 100px; padding: 12px 24px;
+      font-weight: 600; font-size: 0.95rem;
+      transition: border-color 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--saffron); text-decoration: none; }
+    .btn-windows {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #0078d4; color: #fff;
+      border-radius: 100px; padding: 13px 26px;
+      font-weight: 600; font-size: 0.95rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 20px rgba(0,120,212,0.25);
+    }
+    .btn-windows:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,120,212,0.3); text-decoration: none; }
+
+    /* ── Download section ────────────────────────────────── */
+    .download-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem; margin-top: 2rem;
+    }
+    .download-card {
+      border-radius: var(--radius); padding: 1.8rem;
+      display: flex; flex-direction: column; gap: 1rem;
+      border: 1px solid var(--rule); background: var(--white);
+    }
+    .download-card.android { border-color: #34a853; background: #f0faf3; }
+    .download-card.windows { border-color: #0078d4; background: #f0f7ff; }
+    .dl-header { display: flex; align-items: center; gap: 12px; }
+    .dl-os-icon { font-size: 2.2rem; }
+    .dl-os-name { font-size: 1rem; font-weight: 700; color: var(--ink); }
+    .dl-os-sub { font-size: 0.8rem; color: var(--ink-soft); }
+    .dl-desc { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; }
+    @media (max-width: 600px) { .download-grid { grid-template-columns: 1fr; } }
+    .hero-stats {
+      display: flex; gap: 2rem; margin-top: 2.5rem;
+    }
+    .stat-item { }
+    .stat-num {
+      font-size: 1.6rem; font-weight: 700; color: var(--ink);
+      font-family: 'Tiro Devanagari Nepal', serif;
+    }
+    .stat-label { font-size: 0.78rem; color: var(--ink-soft); font-weight: 500; }
+
+    /* Hero visual */
+    .hero-visual {
+      display: flex; justify-content: center; align-items: center;
+    }
+    .phone-mockup {
+      width: 240px;
+      background: var(--ink);
+      border-radius: 36px;
+      padding: 16px;
+      box-shadow: 0 30px 80px rgba(18,19,15,0.2);
+      position: relative;
+    }
+    .phone-screen {
+      background: linear-gradient(145deg, #e85d04 0%, #c1121f 60%, #1a1a2e 100%);
+      border-radius: 24px;
+      height: 380px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px; padding: 2rem 1rem; text-align: center;
+    }
+    .phone-app-icon {
+      width: 72px; height: 72px; border-radius: 18px;
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Tiro Devanagari Nepal', serif;
+      font-size: 2rem; color: #fff; margin-bottom: 8px;
+    }
+    .phone-app-name { color: #fff; font-weight: 700; font-size: 1.1rem; }
+    .phone-app-sub { color: rgba(255,255,255,0.7); font-size: 0.78rem; }
+    .phone-features {
+      margin-top: 1rem; display: flex; flex-direction: column; gap: 6px; width: 100%;
+    }
+    .phone-feat {
+      background: rgba(255,255,255,0.12);
+      border-radius: 8px; padding: 7px 12px;
+      color: rgba(255,255,255,0.9); font-size: 0.75rem; font-weight: 500;
+      text-align: left; display: flex; align-items: center; gap: 7px;
+    }
+
+    /* ── Section wrapper ─────────────────────────────────── */
+    .section-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vw, 4rem) clamp(1rem, 5vw, 2.5rem);
+    }
+    .section-label {
+      text-transform: uppercase; letter-spacing: 0.1em;
+      font-size: 0.75rem; font-weight: 700; color: var(--saffron);
+      margin-bottom: 0.6rem;
+    }
+    h2 {
+      font-family: 'Tiro Devanagari Nepal', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400; line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .section-sub { font-size: 1rem; color: var(--ink-soft); max-width: 560px; }
+
+    /* ── Features grid ───────────────────────────────────── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem; margin-top: 2.5rem;
+    }
+    .feat-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .feat-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.07); transform: translateY(-3px); }
+    .feat-icon {
+      width: 42px; height: 42px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 0.9rem;
+    }
+    .feat-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem; }
+    .feat-card p { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.5; }
+
+    /* ── Content types ───────────────────────────────────── */
+    .content-strip {
+      background: var(--ink);
+      border-radius: var(--radius);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0;
+      overflow: hidden;
+      margin-top: 2.5rem;
+    }
+    .content-item {
+      padding: 1.8rem 1.5rem;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .content-item:last-child { border-right: none; }
+    .content-item .c-icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
+    .content-item h3 { color: #fff; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .content-item p { color: rgba(255,255,255,0.55); font-size: 0.8rem; margin: 0; }
+
+    /* ── Divider ─────────────────────────────────────────── */
+    .rule { border: none; border-top: 1px solid var(--rule); }
+
+    /* ── Reviews ─────────────────────────────────────────── */
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1rem; margin-top: 2rem;
+    }
+    .review-card {
+      background: var(--white); border: 1px solid var(--rule);
+      border-radius: var(--radius); padding: 1.3rem 1.4rem;
+    }
+    .stars { color: #f59e0b; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .review-text { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 0.75rem; font-style: italic; }
+    .review-author { font-size: 0.78rem; font-weight: 600; color: var(--ink); }
+
+    /* ── Disclaimer ──────────────────────────────────────── */
+    .disclaimer {
+      background: #fff8f1; border: 1px solid #fdd9bb;
+      border-radius: var(--radius); padding: 1.2rem 1.4rem;
+      margin-top: 2rem;
+      display: flex; gap: 0.75rem; align-items: flex-start;
+    }
+    .disclaimer p { font-size: 0.84rem; color: var(--ink-soft); margin: 0; }
+    .disclaimer strong { color: var(--ink); display: block; margin-bottom: 0.2rem; }
+
+    /* ── CTA banner ──────────────────────────────────────── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--saffron) 0%, var(--crimson) 100%);
+      border-radius: var(--radius);
+      padding: clamp(2rem, 5vw, 3rem);
+      text-align: center; color: #fff;
+      margin-top: 1rem;
+    }
+    .cta-banner h2 { color: #fff; margin-bottom: 0.5rem; }
+    .cta-banner p { color: rgba(255,255,255,0.85); margin-bottom: 1.75rem; }
+    .btn-white {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff; color: var(--saffron);
+      border-radius: 100px; padding: 13px 28px;
+      font-weight: 700; font-size: 0.95rem;
+      transition: transform 0.15s;
+    }
+    .btn-white:hover { transform: translateY(-2px); text-decoration: none; }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem clamp(1rem, 5vw, 3rem);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+      font-size: 0.82rem; color: var(--ink-soft);
+      max-width: 1100px; margin: 0 auto;
+    }
+    footer a { color: var(--saffron); }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .nav-links li:not(:last-child) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-brand">
+    <div class="logo-mark">लो</div>
+    Loksewa MD
+  </div>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#download">Download</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.edev.loksewa" target="_blank" class="nav-cta">Get the App</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">🇳🇵 Nepal · Competitive Exams</div>
+    <h1>तपाईंको <em>सफलता</em><br/>हाम्रो लक्ष्य</h1>
+    <p class="hero-sub">Nepal's all-in-one preparation platform for Loksewa and competitive examinations — video lectures, eBooks, syllabi, exam notices & official legal documents. All in one app.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.edev.loksewa" target="_blank">
+        ▶ &nbsp;Download on Google Play
+      </a>
+      <a class="btn-windows" href="https://github.com/edev2/loksewamd/tree/main/Releases" target="_blank">
+        🪟 &nbsp;Download for Windows
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">10K+</div>
+        <div class="stat-label">Downloads</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4.4 ★</div>
+        <div class="stat-label">Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Free</div>
+        <div class="stat-label">To Download</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="phone-mockup">
+      <div class="phone-screen">
+        <div class="phone-app-icon">लो</div>
+        <div class="phone-app-name">Loksewa MD</div>
+        <div class="phone-app-sub">लोकसेवा तयारी</div>
+        <div class="phone-features">
+          <div class="phone-feat">📹 Video Lectures</div>
+          <div class="phone-feat">📚 eBooks & PDFs</div>
+          <div class="phone-feat">📋 Exam Notices</div>
+          <div class="phone-feat">⚖️ Legal Documents</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features" style="background: var(--white); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+  <div class="section-wrap">
+    <div class="section-label">What's Inside</div>
+    <h2>Everything you need<br/>to crack the exam</h2>
+    <p class="section-sub">From syllabus to video lectures to official notices — Loksewa MD brings together all your preparation resources in one place.</p>
+
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon" style="background:#fff1ea">📹</div>
+        <h3>Video Lectures</h3>
+        <p>Online instruction and archived video lectures from expert educators, accessible on demand.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:#d6f0e2">📚</div>
+        <h3>eBooks & PDFs</h3>
+        <p>Electronic publications, study guides, and PDF materials carefully curated for exam preparation.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:#fff1ea">📋</div>
+        <h3>Syllabi & Exam Notices</h3>
+        <p>Up-to-date syllabi and official exam notices sourced directly from the Public Service Commission (psc.gov.np).</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:#fef3c7">⚖️</div>
+        <h3>Legal Documents</h3>
+        <p>Official legal documents from Nepal Law Commission (lawcommission.gov.np) for law-related exam topics.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:#d6f0e2">🔍</div>
+        <h3>Easy Search</h3>
+        <p>Find study materials, notices, and documents quickly with built-in search across all content.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:#fff1ea">📡</div>
+        <h3>Always Updated</h3>
+        <p>Content is regularly refreshed to reflect the latest notices, syllabus changes, and new video releases.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Content types -->
+<section id="content">
+  <div class="section-wrap">
+    <div class="section-label">Content Library</div>
+    <h2>One app, every resource<br/>you'll ever need</h2>
+    <div class="content-strip">
+      <div class="content-item">
+        <div class="c-icon">🎓</div>
+        <h3>Lectures</h3>
+        <p>Live & archived video classes</p>
+      </div>
+      <div class="content-item">
+        <div class="c-icon">📖</div>
+        <h3>eBooks</h3>
+        <p>Curated study books & PDFs</p>
+      </div>
+      <div class="content-item">
+        <div class="c-icon">📢</div>
+        <h3>Notices</h3>
+        <p>PSC exam announcements</p>
+      </div>
+      <div class="content-item">
+        <div class="c-icon">📜</div>
+        <h3>Laws</h3>
+        <p>Nepal Law Commission docs</p>
+      </div>
+      <div class="content-item">
+        <div class="c-icon">🗓️</div>
+        <h3>Syllabus</h3>
+        <p>Official exam syllabi</p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <span style="font-size:1.2rem">⚠️</span>
+      <p>
+        <strong>Disclaimer</strong>
+        Loksewa MD is not an official government app and is not affiliated with any government entity, including the Public Service Commission of Nepal or the Nepal Law Commission. All government-related information is sourced from <a href="https://psc.gov.np" target="_blank">psc.gov.np</a> and <a href="https://lawcommission.gov.np" target="_blank">lawcommission.gov.np</a>. We encourage users to cross-verify all official notices from original government sources.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" style="max-width:1100px;margin:0 auto;" />
+
+<!-- Download -->
+<section id="download">
+  <div class="section-wrap">
+    <div class="section-label">Available On</div>
+    <h2>Choose your platform</h2>
+    <p class="section-sub">Loksewa MD is available on Android and Windows — study on your phone or your PC, whichever suits you best.</p>
+
+    <div class="download-grid">
+      <!-- Android -->
+      <div class="download-card android">
+        <div class="dl-header">
+          <div class="dl-os-icon">🤖</div>
+          <div>
+            <div class="dl-os-name">Android</div>
+            <div class="dl-os-sub">Google Play Store · Free</div>
+          </div>
+        </div>
+        <p class="dl-desc">Install directly from Google Play. Always up to date with automatic updates. Rated 4.4 ★ by 51 users.</p>
+        <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.edev.loksewa" target="_blank" style="align-self:flex-start">
+          ▶ &nbsp;Google Play
+        </a>
+      </div>
+
+      <!-- Windows -->
+      <div class="download-card windows">
+        <div class="dl-header">
+          <div class="dl-os-icon">🪟</div>
+          <div>
+            <div class="dl-os-name">Windows</div>
+            <div class="dl-os-sub">GitHub Releases · Free</div>
+          </div>
+        </div>
+        <p class="dl-desc">Download the Windows desktop version from GitHub Releases. Install and study offline on your PC or laptop.</p>
+        <a class="btn-windows" href="https://github.com/edev2/loksewamd/tree/main/Releases" target="_blank" style="align-self:flex-start">
+          🪟 &nbsp;Download for Windows
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" style="max-width:1100px;margin:0 auto;" />
+
+<!-- Reviews -->
+<section id="reviews">
+  <div class="section-wrap">
+    <div class="section-label">User Reviews</div>
+    <h2>Trusted by aspirants<br/>across Nepal</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Result oriented & full supporting app."</p>
+        <div class="review-author">Hira lal Bhujel · March 2026</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"One of the best platforms for anyone who wants to study and prepare for PSC."</p>
+        <div class="review-author">Khadananda Kharal · June 2024</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Very useful app. Learning with fun."</p>
+        <div class="review-author">Suji Bj · May 2023</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="section-wrap" style="padding-top:0">
+  <div class="cta-banner">
+    <h2>Start your Loksewa journey today</h2>
+    <p>Free to download. Always updated. Available on Android & Windows.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a class="btn-white" href="https://play.google.com/store/apps/details?id=com.edev.loksewa" target="_blank">
+        ▶ Google Play
+      </a>
+      <a class="btn-white" href="https://github.com/edev2/loksewamd/tree/main/Releases" target="_blank" style="background:rgba(255,255,255,0.15);color:#fff;border:1.5px solid rgba(255,255,255,0.4);">
+        🪟 Windows Download
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <span>© 2026 Loksewa MD · by <a href="http://edevpandey.com.np" target="_blank">Dev Pandey</a></span>
+  <span>
+    <a href="https://sites.google.com/view/loksewamd/privacypolicy" target="_blank">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:edevpandey@gmail.com">edevpandey@gmail.com</a>
+    &nbsp;·&nbsp;
+    <a href="https://play.google.com/store/apps/details?id=com.edev.loksewa" target="_blank">Google Play</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/edev2/loksewamd/tree/main/Releases" target="_blank">Windows Download</a>
+  </span>
+</footer>
+
+</body>
+</html>
