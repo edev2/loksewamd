@@ -4,7 +4,7 @@
   "pub_date": "2025-06-22T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://raw.githubusercontent.com/edev2/loksewamd/refs/heads/main/releases/loksewamd_pc_7.5.5_x64_en-US.msi",
+      "url": "https://raw.githubusercontent.com/edev2/loksewamd/refs/heads/main/Releases/loksewamd_pc_7.5.5_x64_en-US.msi",
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTanJkWlZHNUZGSlZEdU5rcWtzSGJDc2JhTDF3YXE3azJrbFI2MnVUZjFQOVpOM1pDTjU1MG9zcVJUcEJ5Z3U2WVVqdmVjZXNlNFlBZERFN0p3eGdLcGRxVUJLRElUdUFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyMDkxMzAzCWZpbGU6bG9rc2V3YW1kX3BjXzcuNS41X3g2NF9lbi1VUy5tc2kKZ0tjSzJvN0Ywb2d6T2lXbkVEZ3dZSEtkUUV6dlJQU2Qyb3NJekFyRTZLb3BEYXNlOGZCVjdkcVBlbDYxZXR0NTdHc3ZFYzg1cTdGVWVHTnN1dDFtQnc9PQo="
     }
   }
